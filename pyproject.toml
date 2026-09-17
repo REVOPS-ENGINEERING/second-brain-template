@@ -1,0 +1,22 @@
+[project]
+name = "second-brain-template"
+version = "0.1.0"
+description = "Personal AI second brain built on Claude Code + Claude Agent SDK — session hooks, memory flush, daily reflection, RAG search"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "claude-agent-sdk==0.2.139",
+    "fastembed>=0.8.0",
+    "sqlite-vec>=0.1.9",
+    "numpy>=1.26",
+    "tiktoken>=0.7",
+    "anyio>=4.0",
+]
+
+[tool.uv]
+package = false
+python-preference = "only-system"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

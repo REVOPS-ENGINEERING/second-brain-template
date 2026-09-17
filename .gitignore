@@ -1,0 +1,48 @@
+# Secrets
+.env
+.env.*
+*.env
+.mcp.json
+
+# All runtime data: search DB, cost ledger, staged transcripts, logs,
+# reflection transcripts. Nothing under .claude/data/ commits except the
+# flush dir marker.
+.claude/data/**
+!.claude/data/flush/
+!.claude/data/flush/.gitkeep
+
+# Embedding model cache
+.fastembed_cache/
+
+# Local settings (not shared)
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Advisory lockfile siblings created by shared.file_lock() — zero-byte sentinels,
+# left on disk intentionally (unlinking under a held flock is a TOCTOU race)
+*.lock
+# uv.lock is a package lockfile — must be committed for reproducible installs
+!uv.lock
+
+# Personal memory content — never commit a used vault (template ships .gitkeep only)
+Vault/Memory/daily/*.md
+Vault/Memory/projects/**/*.md
+
+# Obsidian workspace state (changes every session, pure editor noise)
+Vault/.obsidian/workspace.json

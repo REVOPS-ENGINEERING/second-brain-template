@@ -1,0 +1,13 @@
+# Example crontab entries for the second-brain background jobs.
+#
+# Setup:
+#   1. mkdir -p .claude/data/logs   (run once inside the repo — cron logs land here)
+#   2. crontab -e
+#   3. Paste the two uncommented lines below, replacing <REPO> with the absolute
+#      path to this repo (e.g. /home/you/second-brain-template).
+#
+# Daily reflection at 08:00 — curates yesterday's daily log into MEMORY.md / project files:
+0 8 * * * <REPO>/.claude/scripts/run_memory_reflect.sh >> <REPO>/.claude/data/logs/reflection.log 2>&1
+
+# Incremental search index every 15 minutes — keeps semantic search fresh:
+7,22,37,52 * * * * <REPO>/.claude/scripts/run_memory_index.sh >> <REPO>/.claude/data/logs/memory_index.log 2>&1
