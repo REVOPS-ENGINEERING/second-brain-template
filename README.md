@@ -1,8 +1,6 @@
 # Second Brain Template
 
-Claude Code that remembers. Every session gets written to a daily log. A morning job turns those logs into long-term memory. Everything is searchable. You use Claude Code like normal and the plumbing runs itself.
-
-I built this because I kept re-explaining the same context to Claude every session. Decisions, project state, who's who. This fixes that.
+Build this as a second brain and use it as my primary coding agent. Inspiration taken from the memory systems in openclaw. Have added a few quick start skills to pull in context.
 
 ## What you get
 
